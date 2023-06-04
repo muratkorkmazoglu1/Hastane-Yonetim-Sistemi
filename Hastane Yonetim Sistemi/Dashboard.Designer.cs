@@ -29,58 +29,67 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.btnAddDiagnosis = new System.Windows.Forms.Button();
+            this.btnFullHistory = new System.Windows.Forms.Button();
+            this.btnHospital = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labellndecator1 = new System.Windows.Forms.Label();
+            this.labellndecator2 = new System.Windows.Forms.Label();
+            this.labellndecator3 = new System.Windows.Forms.Label();
+            this.labellndecator4 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAddPatient
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(48, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add New Patient Record";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddPatient.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddPatient.Location = new System.Drawing.Point(48, 62);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(177, 50);
+            this.btnAddPatient.TabIndex = 0;
+            this.btnAddPatient.Text = "Add New Patient Record";
+            this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
-            // button2
+            // btnAddDiagnosis
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(49, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add Diagnosis İnformation";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddDiagnosis.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddDiagnosis.Location = new System.Drawing.Point(49, 127);
+            this.btnAddDiagnosis.Name = "btnAddDiagnosis";
+            this.btnAddDiagnosis.Size = new System.Drawing.Size(177, 50);
+            this.btnAddDiagnosis.TabIndex = 1;
+            this.btnAddDiagnosis.Text = "Add Diagnosis İnformation";
+            this.btnAddDiagnosis.UseVisualStyleBackColor = false;
+            this.btnAddDiagnosis.Click += new System.EventHandler(this.btnAddDiagnosis_Click);
             // 
-            // button3
+            // btnFullHistory
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(48, 207);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Full History Of The Patient";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnFullHistory.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnFullHistory.Location = new System.Drawing.Point(48, 207);
+            this.btnFullHistory.Name = "btnFullHistory";
+            this.btnFullHistory.Size = new System.Drawing.Size(176, 50);
+            this.btnFullHistory.TabIndex = 2;
+            this.btnFullHistory.Text = "Full History Of The Patient";
+            this.btnFullHistory.UseVisualStyleBackColor = false;
+            this.btnFullHistory.Click += new System.EventHandler(this.btnFullHistory_Click);
             // 
-            // button4
+            // btnHospital
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(47, 279);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(177, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Hospital İnformation";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnHospital.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHospital.Location = new System.Drawing.Point(47, 279);
+            this.btnHospital.Name = "btnHospital";
+            this.btnHospital.Size = new System.Drawing.Size(177, 50);
+            this.btnHospital.TabIndex = 3;
+            this.btnHospital.Text = "Hospital İnformation";
+            this.btnHospital.UseVisualStyleBackColor = false;
+            this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
             // 
             // label1
             // 
@@ -95,9 +104,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(252, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(261, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(782, 550);
+            this.pictureBox1.Size = new System.Drawing.Size(750, 530);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -111,16 +120,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Hospital Management System";
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(79, 348);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 32);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Exit";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -131,23 +130,88 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // labellndecator1
+            // 
+            this.labellndecator1.AutoSize = true;
+            this.labellndecator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labellndecator1.Location = new System.Drawing.Point(12, 72);
+            this.labellndecator1.Name = "labellndecator1";
+            this.labellndecator1.Size = new System.Drawing.Size(36, 25);
+            this.labellndecator1.TabIndex = 9;
+            this.labellndecator1.Text = ">>";
+            // 
+            // labellndecator2
+            // 
+            this.labellndecator2.AutoSize = true;
+            this.labellndecator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labellndecator2.Location = new System.Drawing.Point(12, 137);
+            this.labellndecator2.Name = "labellndecator2";
+            this.labellndecator2.Size = new System.Drawing.Size(36, 25);
+            this.labellndecator2.TabIndex = 10;
+            this.labellndecator2.Text = ">>";
+            // 
+            // labellndecator3
+            // 
+            this.labellndecator3.AutoSize = true;
+            this.labellndecator3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labellndecator3.Location = new System.Drawing.Point(7, 217);
+            this.labellndecator3.Name = "labellndecator3";
+            this.labellndecator3.Size = new System.Drawing.Size(36, 25);
+            this.labellndecator3.TabIndex = 11;
+            this.labellndecator3.Text = ">>";
+            // 
+            // labellndecator4
+            // 
+            this.labellndecator4.AutoSize = true;
+            this.labellndecator4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labellndecator4.Location = new System.Drawing.Point(12, 289);
+            this.labellndecator4.Name = "labellndecator4";
+            this.labellndecator4.Size = new System.Drawing.Size(36, 25);
+            this.labellndecator4.TabIndex = 12;
+            this.labellndecator4.Text = ">>";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.LightCoral;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(88, 335);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 35);
+            this.btnExit.TabIndex = 13;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(261, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(750, 530);
+            this.panel1.TabIndex = 14;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1032, 553);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.labellndecator4);
+            this.Controls.Add(this.labellndecator3);
+            this.Controls.Add(this.labellndecator2);
+            this.Controls.Add(this.labellndecator1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHospital);
+            this.Controls.Add(this.btnFullHistory);
+            this.Controls.Add(this.btnAddDiagnosis);
+            this.Controls.Add(this.btnAddPatient);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -157,14 +221,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAddPatient;
+        private System.Windows.Forms.Button btnAddDiagnosis;
+        private System.Windows.Forms.Button btnFullHistory;
+        private System.Windows.Forms.Button btnHospital;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labellndecator1;
+        private System.Windows.Forms.Label labellndecator2;
+        private System.Windows.Forms.Label labellndecator3;
+        private System.Windows.Forms.Label labellndecator4;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
