@@ -47,6 +47,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(854, 228);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(135, 22);
             this.txtPassword.TabIndex = 1;
             // 
@@ -76,6 +77,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Form1
             // 

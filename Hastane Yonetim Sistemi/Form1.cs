@@ -16,5 +16,21 @@ namespace Hastane_Yonetim_Sistemi
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            String username = txtUserName.Text;
+            String pass = txtPassword.Text;
+
+            if (username == "hms" && pass == "pass")
+            {
+                MessageBox.Show("you have entered right username and password");
+            }
+            else 
+            {
+                MessageBox.Show("wrong user id or password");
+            }
+
+        }
     }
 }
