@@ -24,7 +24,12 @@ namespace Hastane_Yonetim_Sistemi
 
             if (username == "hms" && pass == "pass")
             {
-                MessageBox.Show("you have entered right username and password");
+                //MessageBox.Show("you have entered right username and password");
+
+                this.Hide();
+                Dashboard ds = new Dashboard();
+                ds.Show();
+
             }
             else 
             {
