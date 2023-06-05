@@ -111,5 +111,48 @@ namespace Hastane_Yonetim_Sistemi
 
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text != "")
+            {
+
+                int pid = Convert.ToInt32(textBox1.Text);
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = DESKTOP-UVIAB98\\SQLEXPRESS; database = hospital; integrated security = True";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "select * from AddPatient where pid = " + pid + "";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+                dataGridView1.DataSource = DS.Tables[0];
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                int pid = Convert.ToInt32(textBox1.Text);
+
+
+            }
+            catch(Exception)
+            {
+
+
+
+            }
+
+
+
+        }
     }
 }

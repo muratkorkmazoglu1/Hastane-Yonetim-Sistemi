@@ -71,11 +71,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtBxSymptoms = new System.Windows.Forms.TextBox();
+            this.txtBxDiagonosis = new System.Windows.Forms.TextBox();
+            this.txtBxMedicines = new System.Windows.Forms.TextBox();
+            this.comboBxWard = new System.Windows.Forms.ComboBox();
+            this.comboBxWardType = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -401,11 +401,11 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.comboBxWardType);
+            this.panel2.Controls.Add(this.comboBxWard);
+            this.panel2.Controls.Add(this.txtBxMedicines);
+            this.panel2.Controls.Add(this.txtBxDiagonosis);
+            this.panel2.Controls.Add(this.txtBxSymptoms);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
@@ -502,49 +502,49 @@
             this.label14.TabIndex = 9;
             this.label14.Text = "Symptom\'s";
             // 
-            // textBox2
+            // txtBxSymptoms
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 10;
+            this.txtBxSymptoms.Location = new System.Drawing.Point(163, 236);
+            this.txtBxSymptoms.Name = "txtBxSymptoms";
+            this.txtBxSymptoms.Size = new System.Drawing.Size(100, 22);
+            this.txtBxSymptoms.TabIndex = 10;
             // 
-            // textBox3
+            // txtBxDiagonosis
             // 
-            this.textBox3.Location = new System.Drawing.Point(163, 302);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 11;
+            this.txtBxDiagonosis.Location = new System.Drawing.Point(163, 302);
+            this.txtBxDiagonosis.Name = "txtBxDiagonosis";
+            this.txtBxDiagonosis.Size = new System.Drawing.Size(100, 22);
+            this.txtBxDiagonosis.TabIndex = 11;
             // 
-            // textBox4
+            // txtBxMedicines
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 364);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 12;
+            this.txtBxMedicines.Location = new System.Drawing.Point(163, 364);
+            this.txtBxMedicines.Name = "txtBxMedicines";
+            this.txtBxMedicines.Size = new System.Drawing.Size(100, 22);
+            this.txtBxMedicines.TabIndex = 12;
             // 
-            // comboBox1
+            // comboBxWard
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBxWard.FormattingEnabled = true;
+            this.comboBxWard.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox1.Location = new System.Drawing.Point(506, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 13;
+            this.comboBxWard.Location = new System.Drawing.Point(506, 242);
+            this.comboBxWard.Name = "comboBxWard";
+            this.comboBxWard.Size = new System.Drawing.Size(121, 24);
+            this.comboBxWard.TabIndex = 13;
             // 
-            // comboBox2
+            // comboBxWardType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBxWardType.FormattingEnabled = true;
+            this.comboBxWardType.Items.AddRange(new object[] {
             "Ac",
             "Non-Ac",
             "None"});
-            this.comboBox2.Location = new System.Drawing.Point(506, 305);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 14;
+            this.comboBxWardType.Location = new System.Drawing.Point(506, 305);
+            this.comboBxWardType.Name = "comboBxWardType";
+            this.comboBxWardType.Size = new System.Drawing.Size(121, 24);
+            this.comboBxWardType.TabIndex = 14;
             // 
             // button1
             // 
@@ -554,6 +554,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashboard
             // 
@@ -635,10 +636,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBxWardType;
+        private System.Windows.Forms.ComboBox comboBxWard;
+        private System.Windows.Forms.TextBox txtBxMedicines;
+        private System.Windows.Forms.TextBox txtBxDiagonosis;
+        private System.Windows.Forms.TextBox txtBxSymptoms;
     }
 }
