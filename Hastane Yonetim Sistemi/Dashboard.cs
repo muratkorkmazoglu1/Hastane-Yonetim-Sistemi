@@ -177,6 +177,13 @@ namespace Hastane_Yonetim_Sistemi
             MessageBox.Show("Data Saved.");
 
 
+            textBox1.Clear();
+            txtBxDiagonosis.Clear();
+            txtBxMedicines.Clear();
+            txtBxSymptoms.Clear();
+            comboBxWard.ResetText();
+            comboBxWardType.ResetText();
+
         }
     }
 }
