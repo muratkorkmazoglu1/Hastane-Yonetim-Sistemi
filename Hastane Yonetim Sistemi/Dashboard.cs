@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,8 @@ namespace Hastane_Yonetim_Sistemi
 
             panel1.Visible = true;
             panel2.Visible = false;
+            panel3.Visible = false;
+            
 
 
 
@@ -43,6 +46,7 @@ namespace Hastane_Yonetim_Sistemi
             panel2.Visible = true;
             pictureBox1.Visible = false;
             label2.Visible = false;
+            panel3.Visible = false;
 
         }
 
@@ -52,6 +56,23 @@ namespace Hastane_Yonetim_Sistemi
             labellndecator2.ForeColor = System.Drawing.Color.Black;
             labellndecator1.ForeColor = System.Drawing.Color.Black;
             labellndecator4.ForeColor = System.Drawing.Color.Black;
+
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = DESKTOP-UVIAB98\\SQLEXPRESS; database = hospital; integrated security = True";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "select * from AddPatient inner join PatientMore on AddPatient.pid = PatientMore.pid";
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
+
+            dataGridView2.DataSource = DS.Tables[0];
+
         }
 
         private void btnHospital_Click(object sender, EventArgs e)
@@ -71,6 +92,7 @@ namespace Hastane_Yonetim_Sistemi
         {
             panel1.Visible = false;
             panel2.Visible = false;
+            panel3.Visible = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
