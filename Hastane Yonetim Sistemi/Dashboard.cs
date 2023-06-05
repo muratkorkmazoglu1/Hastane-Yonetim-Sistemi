@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,41 @@ namespace Hastane_Yonetim_Sistemi
         private void Dashboard_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                String name = txtName.Text;
+                String address = txtAddress.Text;
+                Int64 contact = Convert.ToInt64(txtContact.Text);
+                int age = Convert.ToInt32(txtAge.Text);
+                String gender = comboGender.Text;
+                String blood = txtBlood.Text;
+                String any = txtAny.Text;
+                int pid = Convert.ToInt32(txtPid.Text);
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = DESKTOP-UVIAB98\\SQLEXPRESS; database = hospital; integrated security = True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "insert into AddPatient values ('" + name + "','" + address + "'," + contact + "," + age + ",'" + gender + "','" + blood + "','" + any + "'," + pid + ")";
+
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(" ");
+            }
+
         }
     }
 }
