@@ -95,8 +95,20 @@ namespace Hastane_Yonetim_Sistemi
             }
             catch (Exception)
             {
-                MessageBox.Show(" ");
+                MessageBox.Show("İndvalid data format or invalid pid");
             }
+
+            MessageBox.Show("Data Saved!");
+
+            txtName.Clear();
+            txtAddress.Clear();
+            txtContact.Clear();
+            txtAge.Clear();
+            txtBlood.Clear();
+            txtAny.Clear();
+            txtPid.Clear();
+            comboGender.ResetText();
+
 
         }
     }
