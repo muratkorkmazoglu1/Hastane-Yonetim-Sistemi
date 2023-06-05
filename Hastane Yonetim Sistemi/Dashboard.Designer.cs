@@ -221,7 +221,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label10);
@@ -415,7 +414,7 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(261, 8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 530);
             this.panel2.TabIndex = 18;
@@ -562,6 +561,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1032, 553);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.labellndecator4);

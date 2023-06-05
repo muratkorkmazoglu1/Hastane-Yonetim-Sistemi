@@ -26,6 +26,7 @@ namespace Hastane_Yonetim_Sistemi
             labellndecator4.ForeColor = System.Drawing.Color.Black;
 
             panel1.Visible = true;
+            panel2.Visible = false;
 
 
 
@@ -37,6 +38,12 @@ namespace Hastane_Yonetim_Sistemi
             labellndecator1.ForeColor = System.Drawing.Color.Black;
             labellndecator3.ForeColor = System.Drawing.Color.Black;
             labellndecator4.ForeColor = System.Drawing.Color.Black;
+
+            panel1.Visible = false;
+            panel2.Visible = true;
+            pictureBox1.Visible = false;
+            label2.Visible = false;
+
         }
 
         private void btnFullHistory_Click(object sender, EventArgs e)
@@ -63,6 +70,7 @@ namespace Hastane_Yonetim_Sistemi
         private void Dashboard_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
+            panel2.Visible = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -141,16 +149,32 @@ namespace Hastane_Yonetim_Sistemi
             {
 
                 int pid = Convert.ToInt32(textBox1.Text);
+                string sympt = txtBxSymptoms.Text;
+                string diag = txtBxDiagonosis.Text;
+                string medicine = txtBxMedicines.Text;
+                string ward = comboBxWard.Text;
+                string wardType = comboBxWardType.Text;
+
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = DESKTOP-UVIAB98\\SQLEXPRESS; database = hospital; integrated security = True";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "insert into PatientMore values (" + pid + ",'" + sympt + "','" + diag + "','" + medicine + "','" + ward + "','" + wardType + "')";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
 
 
             }
             catch(Exception)
             {
-
-
-
+                MessageBox.Show("Any field is empty 'OR' Data is in WRONG format.");
             }
-
+            MessageBox.Show("Data Saved.");
 
 
         }
